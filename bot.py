@@ -1,15 +1,11 @@
-from telegram import Update
-from telegram.ext import Updater, MessageHandler, Filters, CallbackContext
 import os
+from telegram import Update, Bot
+from telegram.ext import Updater, MessageHandler, Filters, CallbackContext
 
-BOT_TOKEN = os.getenv('7536291553:AAGxjHtUNXydahcGzzGwFS3RXMyWzCbaeAE')  # Get token from environment
+BOT_TOKEN = os.getenv("BOT_TOKEN")  # This gets your token from Render
 
-SOURCE_CHANNEL_ID = -1002549325968  # Replace with your Channel ID
-TARGET_GROUP_IDS = [
-    -1002049245401,  # Replace with Group 1
-    -1002233522556,  # Replace with Group 2
-    -1002506072930   # Replace with Group 3
-]
+SOURCE_CHANNEL_ID = -1002549325968  # Replace with your channel ID
+TARGET_GROUP_IDS = [-1002049245401, -1002233522556, -1002506072930]  # Replace with your 3 groups
 
 def forward_to_groups(update: Update, context: CallbackContext):
     if update.effective_chat.id == SOURCE_CHANNEL_ID:
