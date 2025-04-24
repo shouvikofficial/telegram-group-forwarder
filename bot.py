@@ -2,7 +2,7 @@ import os
 from telegram import Update, Bot
 from telegram.ext import Updater, MessageHandler, Filters, CallbackContext
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")  # This gets your token from Render
+BOT_TOKEN = os.getenv("7536291553:AAGxjHtUNXydahcGzzGwFS3RXMyWzCbaeAE")  # This gets your token from Render
 
 SOURCE_CHANNEL_ID = -1002549325968  # Replace with your channel ID
 TARGET_GROUP_IDS = [-1002049245401, -1002233522556, -1002506072930]  # Replace with your 3 groups
